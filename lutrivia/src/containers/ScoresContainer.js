@@ -1,9 +1,10 @@
 import React from 'react';
+import Score from '../components/Score'
 
 const ScoresContainer = (props) => {
 
         return(
-            <div>This is a div</div>
+            <div> {props.scores.map(score => <Score score={score} /> )} </div>  
         )
 
 }

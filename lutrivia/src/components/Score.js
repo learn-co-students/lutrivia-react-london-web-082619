@@ -1,13 +1,16 @@
 import React from 'react';
 
-class Button extends React.Component {
+class Score extends React.Component {
 
     render(){
         return(
-            <div>This is a div</div>
+            <div>
+                Name: {this.props.score.name}
+                Score: {this.props.score.score}
+            </div>
         )
     }
 
 }
 
-export default Button
+export default Score

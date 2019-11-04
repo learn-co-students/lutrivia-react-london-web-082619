@@ -1,13 +1,26 @@
 import React from 'react';
 
-class Button extends React.Component {
+class Question extends React.Component {
+
+    state = {
+
+    }
+
+    handleClick = event => {
+        let guess = event.target.id;
+        this.props.checkAnswer(this.props.question, guess)
+    }
 
     render(){
         return(
-            <div>This is a div</div>
+            <div>
+                <p>{this.props.question.text}</p>
+                <button id="true" onClick={this.handleClick}>True</button>
+                <button id="false" onClick={this.handleClick}>False</button>
+            </div>
         )
     }
 
 }
 
-export default Button
+export default Question
